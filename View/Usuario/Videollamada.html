@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Archivos materialize-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!---Inicializa icons-------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Titulo de la ventana -->
+    <title>Videollamada</title>
+</head>
+
+<body>
+    <main>
+        <nav class="light-blue accent-4">
+            <!-- navbar content here  -->
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </nav>
+
+
+        <ul id="slide-out" class="sidenav sidenav-fixed ">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="">
+                    </div>
+                    <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+                </div>
+            </li>
+            <br>
+
+            <div class="center-align">
+                <a href="#name"><span class="black-text name ">Nombre</span></a>
+                <a href="#email"><span class="black-text email">Apellidos</span></a>
+            </div>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="../Usuario/Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
+                    Inicio</a>
+            </li>
+            <li><a class="waves-effect" href="../Usuario/PerfilUsuario.html">Perfil<i
+                        class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Diagnostico.html">Diagnóstico<i
+                        class="material-icons light-blue-text accent-4-text small">filter_frames</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Localizacion.html">Localización<i
+                        class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Citas.html">Citas<i
+                        class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Videollamada.html">Videollamadas<i
+                        class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+            <li><a class="waves-effect" href="../../View/index.html">Cerrar Sesión<i
+                        class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+        </ul>
+
+
+        <!-- inicia contenido -->
+        <div class="container">
+            <form action="">
+                <section>
+                    <div class="row">
+                        <div class="col s12 m10  offset-m3">
+                            <div class="card">
+                                <h2 class="center-align">Cámara</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam doloremque
+                                    nihil dolor hic iusto ratione voluptates recusandae expedita. Consectetur odio, non
+                                    culpa tempora quis mollitia nesciunt saepe ad sapiente!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Codigo y botón para acceder a videollamada -->
+
+                <div class="section">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col s12 m4 offset-m3">
+                                <div class="center-align">
+                                    <b>Código para acceder a la videollamada</b>
+                                    <input type="text" name="code" id="code">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                
+                                    <div class="col s12 m4 offset-m1">
+                                        <button class="btn waves-effect waves-light light-blue accent-4"
+                                            style="border-radius: 25px;"><a href="https://meet.google.com/lookup/dscjtvdo6c?authuser=1&hs=179"
+                                                class="white-text" href="">ir a videollamada
+                                                <i class="material-icons right">visibility
+                                                </i></a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </section>
+        <!-- Aqui termina -->
+
+    </main>
+
+
+    <!-----Inicializa sidenav------>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems,);
+        });
+
+    </script>
+
+</body>
+
+</html>

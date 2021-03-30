@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio Administrador</title>
+
+  <!---Archivos materialize-->
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!---Inicializa icons-------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- link css del buscador -->
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+  <main>
+
+    <!-- navbar -->
+
+    <nav class="light-blue accent-4">
+      <!-- navbar content here  -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+
+    <ul id="slide-out" class="sidenav sidenav-fixed ">
+      <li>
+        <div class="user-view">
+          <div class="background" style="color: transparent;">
+          </div>
+          <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+        </div>
+      </li>
+      <br>
+      <!-- Nombre y apellidos del usuario  -->
+      <div class="center-align">
+        <a href="#name"><span class="black-text name ">Nombre</span></a>
+        <a href="#email"><span class="black-text email">Apellidos</span></a>
+      </div>
+
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="../Administrador/Inicio_Admin.html"><i
+            class="material-icons light-blue-text accent-4-text small">cloud</i> Inicio</a>
+      </li>
+      <li><a class="waves-effect" href="../Administrador/PerfilAdmin.html">Perfil<i
+            class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+      <li><a class="waves-effect" href="../Administrador/LocalizacionAdmin.html">Localización<i
+            class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+      <li><a class="waves-effect" href="../Administrador/Doctores_Admin.html">Doctores<i
+            class="material-icons light-blue-text accent-4-text small">local_pharmacy</i></a></li>
+      <li><a class="waves-effect" href="../Administrador/UsuariosAdmin.html">Usuarios<i
+            class="material-icons light-blue-text accent-4-text small">face</i></a></li>
+      <li><a class="waves-effect" href="../Administrador/VerCuestionarioAdmin.html">Cuestionarios<i
+            class="material-icons light-blue-text accent-4-text small">archives</i></a></li>
+      <li><a class="waves-effect" href="../Administrador/Citas_Admin.html">Citas<i
+            class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+      <li><a class="waves-effect" href="../Administrador/Videollamada_Admin.html">Videollamadas<i
+            class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+      <li><a class="waves-effect" href="index.html">Cerrar Sesión<i
+            class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+    </ul>
+
+    <!-- Boton de agregar hospital -->
+    <div class="container">
+      <form action="">
+
+        <!-- Buscador -->
+        <div class="row">
+          <div class="input-field col s11 m9 offset-s1 offset-m3">
+            <input id="FiltrarContenido" type="text" class="form-control center-align black-text" placeholder="Buscar"
+              aria-label="Alumno">
+            <i class="material-icons prefix blue-text indigo-text darken-3 right-align ">search</i>
+          </div>
+        </div>
+        <!-- termina buscador -->
+
+        <!-- Seccion de hospital y laboratorio -->
+        <section>
+          <div class="row">
+            <div class="col s12 m4 offset-s3 offset-m3">
+              <div class="left-align">
+                <a class="waves-effect waves-light light-blue white-text btn modal-trigger" href="#modal1"
+                  style="border-radius: 20px;">Agregar Hospital<i
+                    class="material-icons with-text accent-4-text right">local_pharmacy</i></a>
+              </div>
+            </div>
+
+            <!-- Segundo boton de agregar laboratorio -->
+            <div class="row">
+              <div class="col s8 offset-s1 m4 offset-m1">
+                <div class="right-align">
+                  <a class="waves-effect waves-light light-blue white-text btn modal-trigger" href="#modal2"
+                    style="border-radius: 20px;">Agregar laboratorio<i
+                      class="material-icons with-text accent-4-text right">local_pharmacy</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div class="col s12 m12">
+
+              <!-- titulo del modal -->
+              <h4 class="center-align">Agregar Hospital</h4>
+              <div class="row">
+
+                <!-- Campo nombre -->
+                <div class="col s10 m9 offset-m2">
+                  <div class="input-field">
+                    <i class="material-icons left blue-text accent-4-text prefix left" required>face</i>
+                    <input type="text" id="Nombre" name="Nombre">
+                    <label for="Nombre">Nombre
+                    </label>
+                  </div>
+
+                  <!-- CAmpo Direccion -->
+                  <div class="row">
+                    <div class="input-field">
+                      <i class="material-icons left  blue-text accent-4-text prefix left" required>my_location</i>
+                      <input type="text" name="Direccion" id="Direccion">
+                      <label for="Direccion">Dirección
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Descripcion -->
+                  <div class="row">
+                    <div class="input-field">
+                      <i class="material-icons left blue-text accent-4-text prefix left" required>comment</i></label>
+                      <input type="text" name="Descripcion" id="Descripcion">
+                      <label for="Descripcion">Descripción
+                    </div>
+                  </div>
+
+                  <!-- Subir foto -->
+                  <div class="row">
+                    <div class="file-field input-field col s12 m12">
+                      <div class="btn light-blue accent-4" id="Foto_Perfil">
+                        <span class="" style="border-radius: 10px;">Subir foto: </span>
+                        <input type="file" name="Foto" id="Foto">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Boton de registro -->
+                  <div class="center-align">
+                    <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action"
+                      style="border-radius: 20px;"> Confirmar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal 2 Structure -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <div class="col s12 m12">
+
+              <!-- titulo del modal -->
+              <h4 class="center-align">Agregar Laboratorio</h4>
+              <div class="row">
+
+                <!-- Campo nombre -->
+                <div class="col s10 m9 offset-m2">
+                  <div class="input-field">
+                    <i class="material-icons left blue-text accent-4-text prefix left " required>face</i>
+                    <input type="text" id="Nombre" name="Nombre">
+                    <label for="Nombre">Nombre
+                    </label>
+                  </div>
+
+                  <!-- CAmpo Direccion -->
+                  <div class="row">
+                    <div class="input-field">
+                      <i class="material-icons left  blue-text accent-4-text prefix left" required>my_location</i>
+                      <input type="text" name="Direccion" id="Direccion">
+                      <label for="Direccion">Dirección
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Descripcion -->
+                  <div class="row">
+                    <div class="input-field">
+                      <i class="material-icons left blue-text accent-4-text prefix left" required>comment</i></label>
+                      <input type="text" name="Descripcion" id="Descripcion">
+                      <label for="Descripcion">Descripción
+                    </div>
+                  </div>
+
+                  <!-- Subir foto -->
+                  <div class="row">
+                    <div class="file-field input-field col s12 m12">
+                      <div class="btn light-blue accent-4" id="Foto_Perfil">
+                        <span class="" style="border-radius: 10px;">Subir foto: </span>
+                        <input type="file" name="Foto" id="Foto">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Boton de registro -->
+                  <div class="center-align">
+                    <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action"
+                      style="border-radius: 20px;"> Confirmar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Terminan los modals -->
+
+        <!-- Card -->
+        <section>
+          <div class="row">
+            <div class="col s12 m4 offset-m2">
+              <div class="row">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="../../img/hospitales/imss hospital acapulco.jpg" alt="" class="responsive-img" width="8px"
+                      height="270px">
+                  </div>
+                  <div class="card-content">
+                    <p>Nombre:</p>
+                    <p>Ubicación: </p>
+                    <p>Fecha de publicación: </p>
+                    <br><br>
+                    <div class="row center-align">
+                      <button class="waves-effect btn green accent-4 prefix"
+                            style="border-radius: 25px;"><a href="../Administrador/VerPublicacionAdmin.html" class="white-text">Ver<i
+                              class="waves-effect material-icons white-text right">visibility
+                            </i></a></button>
+                      <button class="waves-effect btn red accent-4 prefix"
+                          style="border-radius: 25px;"><a href="#" class="white-text">Eliminar<i
+                            class="waves-effect material-icons white-text right">close</i></a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- segunda card -->
+            <div class="row">
+              <div class="col s12 m4 offset-m2">
+                <div class="row">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="../../img/hospitales/descarga.jpg" alt="" class="responsive-img">
+                    </div>
+                    <div class="card-content">
+                      <p>Nombre:</p>
+                      <p>Ubicación: </p>
+                      <p>Fecha de publicación: </p>
+                      <br><br>
+                      <div class="row center-align">
+                        <button class="waves-effect btn green accent-4 prefix"
+                            style="border-radius: 25px;"><a href="../Administrador/VerPublicacionAdmin.html" class="white-text">Ver<i
+                              class="waves-effect material-icons white-text right">visibility
+                            </i></a></button>
+                        <a href="#"><button class="waves-effect btn red accent-4 prefix"
+                            style="border-radius: 25px;">Eliminar<i
+                              class="waves-effect material-icons white-text right">close</i></button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+
+    </form>
+    </div>
+    </div>
+  </main>
+  <!-- inicializa modal -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
+  </script>
+
+
+  <script>
+    //----------------------------Inicia sidenav---------------------------------------//
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+              //-------------------------------Modal--
+  </script>
+
+</body>
+
+</html>

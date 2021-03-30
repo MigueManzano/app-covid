@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localización de equipo médico</title>
+  <!---Archivos materialize-->
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!---Inicializa icons-------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- link del css del buscador -->
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+
+<body>
+  <main>
+
+    <nav class="light-blue accent-4">
+      <!-- navbar content here  -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+    <!-- Barra desplegable -->
+    <ul id="slide-out" class="sidenav sidenav-fixed ">
+      <li>
+        <div class="user-view">
+          <div class="background">
+          </div>
+          <!-- Imagen usuario -->
+          <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+        </div>
+      </li>
+      <br>
+
+      <div class="center-align">
+        <a href="#name"><span class="black-text name ">Nombre</span></a>
+        <a href="#email"><span class="black-text email">Apellidos</span></a>
+      </div>
+
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="../Usuario/Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
+          Inicio</a>
+      </li>
+      <li><a class="waves-effect" href="../Usuario/PerfilUsuario.html">Perfil<i
+            class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Diagnostico.html">Diagnóstico<i
+            class="material-icons light-blue-text accent-4-text small">filter_frames</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Localizacion.html">Localización<i
+            class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Citas.html">Citas<i
+            class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Videollamada.html">Videollamadas<i
+            class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+      <li><a class="waves-effect" href="../../View/index.html">Cerrar Sesión<i
+            class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+    </ul>
+
+
+
+
+    <!-- Contenedor -->
+    <div class="container">
+      <div class="row">
+        <form action="">
+          <!-- Buscador -->
+          <div class="row">
+            <section>
+              <div class="input-field col s9 m7 offset-s1 offset-m4">
+                <!-- Buscador -->
+                <input id="FiltrarContenido" type="text" class="form-control center-align black-text"
+                  placeholder="Buscar" aria-label="Alumno">
+                <i class="material-icons prefix blue-text indigo-text darken-3 right">search</i>
+              </div>
+              <!-- Termina buscador -->
+
+              <!-- Boton modal -->
+              <div class="col s10 m3 offset-s2 offset-m6">
+                <a class="waves-effect waves-light btn modal-trigger light-blue accent-4" href="#modal2"
+                  style="border-radius: 20px;">Agregar publicación</a>
+              </div>
+            </section>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contenedor -->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m9  offset-m3">
+          <div class="row">
+            <form class="">
+
+              <!-- Modal Structure -->
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;" class="center-align">Hacer nueva
+                    publicación
+                  </h4>
+                  <!-- campo de nombre del producto  -->
+                  <div class="input-field col s12 m9 offset-m2">
+                    <i class="material-icons prefix light-blue-text accent-4 left">message</i>
+                    <input type="text" name="" id="Texto" class="validate" required>
+                    <label for="Texto">Nombre del producto</label>
+                  </div>
+                  <!-- Campo de agregar descripcion -->
+                  <div class="input-field col s12 m9 offset-m2">
+                    <i class="material-icons prefix light-blue-text accent-4 left">forum</i>
+                    <input type="text" name="" id="Texto1" class="validate" required>
+                    <label for="Texto1">Descripción</label>
+                  </div>
+
+                  <!-- Campo de dirección -->
+                  <div class="input-field col s12 m9 offset-m2">
+                    <i class="material-icons prefix light-blue-text accent-4 left">add_location</i>
+                    <input type="text" name="" id="Texto3" class="validate" required>
+                    <label for="Texto3" class="validate">Dirección</label>
+                  </div>
+
+                  <!-- Campo para adjuntar foto -->
+                  <div class="file-field input-field col s12 m9  offset-m2">
+                    <div class="btn light-blue accent-4" id="Foto_Perfil">
+                      <i class="material-icons left">add_a_photo</i>
+                      <span class="" style="border-radius: 10px;">Foto: </span>
+                      <input type="file" name="Foto" id="Foto">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                    </div>
+                  </div>
+                  <!-- Boton para agregar publicación -->
+                  <div class="row center-align">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text"><button
+                        class="btn waves-effect light-blue accent-4" style="border-radius: 20px;"> Agregar</a></button>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Card -->
+              <section>
+                <div class="row">
+                  <div class="col s12 m4 offset-m1">
+                    <div class="row">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="../../img/productos/tanque-oxigeno-web.jpg" alt="" class="responsive-img" width="8px"
+                            height="270px">
+                        </div>
+                        <div class="card-content">
+                          <p>Nombre:</p>
+                          <p>Ubicación: </p>
+                          <p>Fecha de publicación: </p>
+                          <br>
+                          <!--  -->
+                          <div class="row center-align">
+                            <button class="waves-effect btn green accent-4 prefix" style="border-radius: 25px;"> <a
+                                href="../Usuario/VerPublicacion.html" class="white-text">Ver<i
+                                  class="waves-effect material-icons white-text right">visibility</i>
+                            </button></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+                  <div class="row">
+                    <div class="col s12 m4 offset-m2">
+                      <div class="row">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="../../img/productos/48FY47_AS01.jpg" alt="" class="responsive-img">
+                          </div>
+                          <div class="card-content">
+                            <p>Nombre: </p>
+                            <p>Ubicación: </p>
+                            <p>Fecha de publicación: </p>
+                            <br>
+                            <!--  -->
+                            <div class="row center-align">
+                              <button class="waves-effect btn green accent-4 prefix" style="border-radius: 25px;"> <a
+                                  href="../Usuario/VerPublicacion.html" class="white-text">Ver<i
+                                    class="waves-effect material-icons white-text right">visibility</i>
+                              </button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-----Inicializa sidenav------>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems,);
+    });
+
+  </script>
+  <!-- inicializa modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems,);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+      $('.modal').modal();
+    })
+
+  </script>
+</body>
+
+</html>

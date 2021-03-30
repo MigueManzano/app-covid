@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicación</title>
+    <!---Archivos materialize-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!---Inicializa icons-------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <main>
+        <!-- Navbar -->
+        <nav class="light-blue accent-4">
+            <!-- navbar content here  -->
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </nav>
+
+        <!-- Barra desplegable -->
+        <ul id="slide-out" class="sidenav sidenav-fixed ">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                    </div>
+                    <!-- Imagen usuario -->
+                    <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+                </div>
+            </li>
+            <br>
+
+            <div class="center-align">
+                <a href="#name"><span class="black-text name ">Nombre</span></a>
+                <a href="#email"><span class="black-text email">Apellidos</span></a>
+            </div>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i> Inicio</a>
+            </li>
+            <li><a class="waves-effect" href="PerfilUsuario.html">Perfil<i
+                        class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+            <li><a class="waves-effect" href="Diagnostico.html">Diagnóstico<i
+                        class="material-icons light-blue-text accent-4-text small">filter_frames</i></a></li>
+            <li><a class="waves-effect" href="Localizacion.html">Localización<i
+                        class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+            <li><a class="waves-effect" href="Citas.html">Citas<i
+                        class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+            <li><a class="waves-effect" href="Videollamada_Admin.html">Videollamadas<i
+                        class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+            <li><a class="waves-effect" href="index.html">Cerrar Sesión<i
+                        class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+        </ul>
+
+        <br>
+        <!-- Contenedor -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 offset-m2">
+                    <form action="">
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <!-- Card donde va la imagen -->
+                                <img src="../../img/Citas/human-digestive-system-163714_1280.jpg" alt="" id="Foto"
+                                    class="responsive-img" width="270px" height="180px">
+
+                                <br><br>
+                                <!-- Descripción -->
+                                <div class="col s12 m12">
+                                    <b>Descripción</b>
+                                    <input type="text" name="Descripción" id="Descripción" class="materialize-textarea"
+                                        style="text-transform: capitalize;">
+                                </div>
+                            </div>
+                            <!-- Contenido del card -->
+                            <div class="card-stacked">
+                                <div class="card-content" style="font-family: 'Times New Roman', Times, serif;">
+                                    <div class="row">
+                                        <div class="col s12 m12">
+                                            <b>Nombre</b>
+                                            <input type="text" name="Nombre" id="Nombre" class="materialize-textarea"
+                                                style="text-transform: capitalize;">
+                                        </div>
+                                    </div>
+
+                                    <!--  Apellidos-->
+                                    <div class="row">
+                                        <!-- Apellidos -->
+                                        <div class="col s12 m12">
+                                            <b>Apellidos</b>
+                                            <input type="text" name="Apellidos" id="Apellidos"
+                                                class="materialize-textarea" style="text-transform: capitalize;">
+                                        </div>
+                                    </div>
+
+                                    <!-- Domicilio  -->
+                                    <div class="row">
+                                        <div class="col s12 m12">
+                                            <b>Domicilio</b>
+                                            <input type="text" name="Domicilio" id="Domicilio"
+                                                class="materialize-textarea">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col s12 m12">
+                                            <!-- Fecha de publicacion -->
+                                            <b>Fecha de Publicación</b>
+                                            <input type="text" name="Fecha_P" id="Fecha_P" class="materialize-textarea"
+                                                style="text-transform: capitalize;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección de comentarios -->
+                        <div class="center">
+                            <p>Añadir Comentario:</p>
+                            <textarea name="" id="CajaComen" name="comment" cols="5" rows="30"></textarea>
+                            <br>
+                            <br>
+                            <button class="btn waves-effect waves-light light-blue accent-4 white-text "
+                                style="border-radius: 25px;">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico</title>
+
+  <!---Archivos materialize-->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!---Inicializa icons-------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+  <main>
+    <nav class="light-blue accent-4">
+      <!-- navbar content here  -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+
+    <ul id="slide-out" class="sidenav sidenav-fixed ">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="">
+          </div>
+          <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+        </div>
+      </li>
+      <br>
+
+      <div class="center-align">
+        <a href="#name"><span class="black-text name ">Nombre</span></a>
+        <a href="#email"><span class="black-text email">Apellidos</span></a>
+      </div>
+
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="../Usuario/Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
+          Inicio</a>
+      </li>
+      <li><a class="waves-effect" href="../Usuario/PerfilUsuario.html">Perfil<i
+            class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Diagnostico.html">Diagnóstico<i
+            class="material-icons light-blue-text accent-4-text small">filter_frames</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Localizacion.html">Localización<i
+            class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Citas.html">Citas<i
+            class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+      <li><a class="waves-effect" href="../Usuario/Videollamada.html">Videollamadas<i
+            class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+      <li><a class="waves-effect" href="../../View/index.html">Cerrar Sesión<i
+            class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+    </ul>
+
+    <form action="">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m10 offset-m2 center-align">
+
+            <!-- Titulo de card -->
+            <h4 class="justify" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+              Cuestionario sobre sintomas de
+              Covid-19</h4>
+            <div class="card">
+              <div class="row">
+                <br><br>
+                <!-- Fecha de nacimiento -->
+                <div class="row">
+                  <div class="input-field col s10 m10 offset-s1 offset-m1">
+                    <input type="text" id="Fecha_Naci" name="Fecha" class="datepicker" required>
+                    <label for="Fecha_Naci">Fecha de Nacimiento</label>
+                  </div>
+
+                  <!-- Campo pregunta fiebre -->
+                  <div class="row">
+                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                      <select>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">Si</option>
+                        <option value="2">No</option>
+                      </select>
+                      <label for="">¿Ha presentando una temperatura mayor a 36°?</label>
+                    </div>
+                  </div>
+                  <br>
+
+                  <!-- Campo sobre covid-19 -->
+                  <div class="row">
+                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                      <select>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">Si</option>
+                        <option value="2">No</option>
+                      </select>
+                      <label>¿Ha convivido con alguna persona que tenga covid-19?</label>
+                    </div>
+                  </div>
+                  <br><br>
+
+                  <!-- campo de enfermedad cronica -->
+                  <div class="row">
+                    <div class="input-field col s8 m10 offset-s1 offset-m1">
+                      <select>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">Si</option>
+                        <option value="2">No</option>
+                      </select>
+                      <label>¿Ha padecido alguna enfermedad crónica?</label>
+                    </div>
+                  </div>
+                  <br><br><br>
+
+                  <!-- Campo de enfermedades crónicas -->
+                  <div class="row">
+                    <div class="input-field col s8 m10 offset-s1 offset-m1">
+                      <select>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">Ninguna</option>
+                        <option value="2">Mal de Alheimer y demencia</option>
+                        <option value="3">Aritris</option>
+                        <option value="4">Asma</option>
+                        <option value="5">Cáncer</option>
+                        <option value="6">EPOC (enfermedad pulmonar obstructiva crónica)</option>
+                        <option value="7">Enfermedad de Crohn</option>
+                        <option value="8">Fibrosis quística</option>
+                        <option value="9">Diabetes</option>
+                        <option value="10">Epilepsia</option>
+                        <option value="11">Enfermedad del corazón</option>
+                        <option value="12">VIH/SIDA</option>
+                        <option value="13">Esclerosis múltiple</option>
+                        <option value="14">Mal de Parkinson</option>
+                      </select>
+                      <label>Selecciona cual enfermedad crónica padeces.</label>
+                    </div>
+                  </div>
+
+                  <!-- Campo de selección de fecha de sintomas -->
+                  <div class="row">
+                    <div class="input-field col s8 m10 offset-s1 offset-m1">
+                      <input type="text" id="Fecha" name="Fecha" class="datepicker" required>
+                      <label for="Fecha">Fecha estimada de síntomas</label>
+                    </div>
+                  </div>
+
+                  <br>
+                  <!-- Campo de selección de sintomas -->
+                  <div class="row">
+                    <div class="col s8 m10 offset-s1 offset-m1">
+
+                      <p class="left-align">¿Ha presentado alguno de estos síntomas?</p>
+                      <ul class="left-align">
+                        <div class="checkboxes">
+                          
+                            <div class="input-field col s9 m10 offset-s1 offset-m1">
+                              <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                              </select>
+                              <label>Tos</label>
+                            </div>
+                         
+
+                            <div class="input-field col s9 m10 offset-s1 offset-m1">
+                              <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                              </select>
+                              <label>Dolores Musculares</label>
+                            </div>
+
+                            <div class="input-field col s9 m10 offset-s1 offset-m1">
+                              <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                              </select>
+                              <label>Dolor de Cabeza</label>
+                            </div>
+
+                            <div class="input-field col s9 m10 offset-s1 offset-m1">
+                              <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                              </select>
+                              <label>Dolor de Garganta</label>
+                            </div>
+
+                            <div class="input-field col s9 m10 offset-s1 offset-m1">
+                              <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                              </select>
+                              <label>Dolor en las Articulaciones</label>
+                            </div>
+                            <div class="input-field col s9 m10 offset-s1 offset-m1">
+                              <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                              </select>
+                              <label>Dificultad para respirar</label>
+                            </div>
+                        </div>
+
+                      </ul>
+                    </div>
+                  </div>
+
+
+                  <!-- Boton de calcular probabilidad -->
+                  <div class="input-field ">
+                    <a href="#"><button class="btn waves-effect waves-light light-blue accent-4" type="submit"
+                        name="action" style="border-radius: 25px;">Calcular
+                        <i class="material-icons right">cached</i>
+                      </button> </a>
+                  </div>
+
+                  <p class="center align"
+                    style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">La probabilidad de
+                    padecer Covid-19 es de: </p>
+
+                  <p class="center">80%</p>
+                  <section class="">
+                    <div class="row">
+                      <div class="col s12 m6">
+                        <div class="row">
+
+                          <!-- Boton de hospitales disponibles para realizarse la prueba de covid -->
+                         <button class="btn waves-effect waves-light light-blue accent-4"
+                              type="submit" name="action" style="border-radius: 25px;"> <a href="../Usuario/Inicio.html" class="white-text"></a>Hospitales
+                              <i class="material-icons right">local_hospital
+                              </i>
+                            </button> </a>
+                        </div>
+                      </div>
+                      <!-- Boton para agendar cita -->
+                      <div class="row">
+                        <div class="col s12 m6">
+                          <div class="row">
+
+                            <!-- Boton que lleva a la ventana de citas -->
+                            <button class="btn waves-effect waves-light light-blue accent-4"
+                                type="submit" name="action" style="border-radius: 25px;"><a href="../Usuario/Citas.html" class="white-text"></a>Agendar cita
+                                <i class="material-icons right">view_agenda</i>
+                              </button> </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+  </main>
+
+
+
+  <!-- Script para selección  -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems,);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+  </script>
+
+
+  <!-- Script del calendario en español -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, {
+        showClearBtn: false,
+        firstDay: 1,
+        yearRange: [1950, 2021],
+        i18n: {
+          months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+          monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+          weekdays: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+          weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mier', 'Jue', 'Vier', 'Sab'],
+          weekdaysAbbrev: ['D', 'L', 'M', 'M', 'J', 'V', 'S']
+        }
+      })
+      //------------------------------Timepicker--------------------------------//
+      var elems = document.querySelectorAll('.timepicker');
+      var instances = M.Timepicker.init(elems, {
+        showClearBtn: false,
+        onOpenStart: true,
+      })
+
+    });
+  </script>
+
+
+  <!-----Inicializa sidenav------>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems,);
+    });
+
+  </script>
+
+</body>
+
+</html>

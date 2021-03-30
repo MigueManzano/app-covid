@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Archivos materialize-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!---Inicializa icons-------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- link css del buscador -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+
+    <!-- Titulo de la pagina -->
+    <title>Inicio</title>
+</head>
+
+<body>
+    <main>
+        <!-- Barra despegable -->
+        <nav class="light-blue accent-4">
+            <!-- navbar content here  -->
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </nav>
+
+
+        <ul id="slide-out" class="sidenav sidenav-fixed ">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                    </div>
+                    <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+                </div>
+            </li>
+            <br>
+
+            <!-- Nombre y apellidos de usuario -->
+            <div class="center-align">
+                <a href="#name"><span class="black-text name ">Nombre</span></a>
+                <a href="#email"><span class="black-text email">Apellidos</span></a>
+            </div>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="../Usuario/Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
+                    Inicio</a>
+            </li>
+            <li><a class="waves-effect" href="../Usuario/PerfilUsuario.html">Perfil<i
+                        class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Diagnostico.html">Diagnóstico<i
+                        class="material-icons light-blue-text accent-4-text small">filter_frames</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Localizacion.html">Localización<i
+                        class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Citas.html">Citas<i
+                        class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Videollamada.html">Videollamadas<i
+                        class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+            <li><a class="waves-effect" href="../../View/index.html">Cerrar Sesión<i
+                        class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+        </ul>
+
+
+        <!-- Barra deslizante lateral -->
+
+        <ul class="sidenav" id="mobile-demo">
+            <!-- Nombre y apellidos de usuario -->
+            <div class="center-align">
+                <a href="#name"><span class="black-text name ">Nombre</span></a>
+                <a href="#email"><span class="black-text email">Apellidos</span></a>
+            </div>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="../Usuario/Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
+                    Inicio</a>
+            </li>
+            <li><a class="waves-effect" href="../Usuario/PerfilUsuario.html">Perfil<i
+                        class="material-icons light-blue-text accent-4-text small">assignment_ind</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Diagnostico.html">Diagnóstico<i
+                        class="material-icons light-blue-text accent-4-text small">filter_frames</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Localizacion.html">Localización<i
+                        class="material-icons light-blue-text accent-4-text small">pin_drop</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Citas.html">Citas<i
+                        class="material-icons light-blue-text accent-4-text small">storage</i></a></li>
+            <li><a class="waves-effect" href="../Usuario/Videollamada.html">Videollamadas<i
+                        class="material-icons light-blue-text accent-4-text small">video_call</i></a></li>
+            <li><a class="waves-effect" href="../../View/index.html">Cerrar Sesión<i
+                        class="material-icons light-blue-text accent-4-text small">keyboard_tab</i></a></li>
+        </ul>
+
+        <!-- Inicia contenido de la pagina -->
+        <div class="container">
+            <div class="row">
+                <form action="">
+
+                    <!-- Buscador -->
+                    <div class="row">
+                        <div class="input-field col s9 m7 offset-s1 offset-m4">
+                            <input id="FiltrarContenido" type="text" class="form-control center-align black-text"
+                                placeholder="Buscar" aria-label="Alumno">
+                            <i class="material-icons prefix blue-text indigo-text darken-3 right-align ">search</i>
+                        </div>
+                    </div>
+                    <!-- Termina buscador -->
+
+
+                    <!-- Card -->
+                    <section>
+                        <div class="row">
+                            <div class="col s12 m8 offset-m3">
+                                <div class="row">
+                                    <div class="card horizontal">
+                                        <div class="card-image">
+                                            <img src="../../img/hospitales/imss hospital acapulco.jpg"
+                                                class="responsive-img">
+                                        </div>
+                                        <div class="card-content">
+                                            <p>Nombre:</p>
+                                            <br>
+                                            <p>Dirección: </p>
+                                            <br>
+                                            <p>Descripción: </p>
+                                            <br>
+                                            <p>Fecha de publicación: </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-----Inicializa sidenav------>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems,);
+        });
+
+    </script>
+</body>
+
+</html>
