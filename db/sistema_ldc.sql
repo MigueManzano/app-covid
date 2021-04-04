@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sistema.ldc`
+-- Base de datos: `sistema_ldc`
 --
 
 -- --------------------------------------------------------
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `citas` (
-  `IDCitas` int(11) NOT NULL,
-  `IDUsu` int(11) NOT NULL,
-  `IDMedico` int(11) NOT NULL,
+  `IdCita` int(11) NOT NULL,
+  `IdUsuario` int(11) NOT NULL,
+  `IdMedico` int(11) NOT NULL,
   `FechaCita` date NOT NULL,
   `HoraCita` time NOT NULL,
   `CodigoCita` int(11) NOT NULL
@@ -42,11 +42,11 @@ CREATE TABLE `citas` (
 -- Estructura de tabla para la tabla `comentario`
 --
 
-CREATE TABLE `comentario` (
-  `IDComentario` int(11) NOT NULL,
-  `ID_User` int(11) NOT NULL,
-  `IDPublic` int(11) NOT NULL,
-  `Comentario` text NOT NULL,
+CREATE TABLE `comentarios` (
+  `IdComentario` int(11) NOT NULL,
+  `Id_usuario` int(11) NOT NULL,
+  `IdPublic` int(11) NOT NULL,
+  `Descripcion` text NOT NULL,
   `FechaComent` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -54,7 +54,7 @@ CREATE TABLE `comentario` (
 -- Volcado de datos para la tabla `comentario`
 --
 
-INSERT INTO `comentario` (`IDComentario`, `ID_User`, `IDPublic`, `Comentario`, `FechaComent`) VALUES
+INSERT INTO `comentarios` (`IDComentario`, `Id_usuario`, `IdPublic`, `Descripcion`, `FechaComent`) VALUES
 (1, 1, 1, 'cual farmacia dices', '2021-03-22');
 
 -- --------------------------------------------------------
@@ -64,8 +64,8 @@ INSERT INTO `comentario` (`IDComentario`, `ID_User`, `IDPublic`, `Comentario`, `
 --
 
 CREATE TABLE `cuestionario` (
-  `IDCuestion` int(11) NOT NULL,
-  `IDusuario` int(11) NOT NULL,
+  `IdCuestion` int(11) NOT NULL,
+  `Idusuario` int(11) NOT NULL,
   `Pregunta1Cuestion` int(11) NOT NULL,
   `Pregunta2Cuestion` int(11) NOT NULL,
   `Pregunta3Cuestion` int(11) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE `cuestionario` (
   `Pregunta8Cuestion` int(11) NOT NULL,
   `Pregunta9Cuestion` int(11) NOT NULL,
   `Pregunta10Cuestion` int(11) NOT NULL,
-  `PorcentajeCuestion` int(11) NOT NULL,
+  `PorcentajeCuestion` int(11) NOT NULL,/*???*/
   `FechaCuestion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -88,12 +88,12 @@ CREATE TABLE `cuestionario` (
 --
 
 CREATE TABLE `lugares` (
-  `IDLugar` int(11) NOT NULL,
+  `IdLugar` int(11) NOT NULL,
   `NombreLugar` varchar(100) NOT NULL,
   `DescripcionLugar` text NOT NULL,
   `DireccionLugar` varchar(200) NOT NULL,
   `FechaLugar` date NOT NULL,
-  `ImagenLugar` varchar(100) NOT NULL,
+  `ImagenLugar` varchar(100) NOT NULL,/*varchar??*/
   `NumeroLugar` int(15) NOT NULL,
   `CorreoLugar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -112,8 +112,8 @@ INSERT INTO `lugares` (`IDLugar`, `NombreLugar`, `DescripcionLugar`, `DireccionL
 --
 
 CREATE TABLE `pruebas` (
-  `IDPruebas` int(11) NOT NULL,
-  `UserID` int(11) NOT NULL,
+  `IdPruebas` int(11) NOT NULL,
+  `IdUsuario` int(11) NOT NULL,
   `NombrePrueba` varchar(100) NOT NULL,
   `DescripPrueba` varchar(100) NOT NULL,
   `ImagenPrueba` varchar(100) NOT NULL,
@@ -133,9 +133,9 @@ INSERT INTO `pruebas` (`IDPruebas`, `UserID`, `NombrePrueba`, `DescripPrueba`, `
 -- Estructura de tabla para la tabla `publicacion`
 --
 
-CREATE TABLE `publicacion` (
-  `IDPublic` int(11) NOT NULL,
-  `IDUser` int(11) NOT NULL,
+CREATE TABLE `publicaciones` (
+  `IdPublic` int(11) NOT NULL,
+  `IdUsuario` int(11) NOT NULL,
   `DescriPublic` text NOT NULL,
   `FechaPublic` date NOT NULL,
   `ImagePublic` varchar(100) NOT NULL
@@ -175,17 +175,17 @@ INSERT INTO `roles` (`IDRol`, `Rol`) VALUES
 --
 
 CREATE TABLE `usuarios` (
-  `IDUser` int(11) NOT NULL,
-  `TipoIDUser` int(11) NOT NULL,
-  `NombreUser` varchar(100) NOT NULL,
-  `ApellidosUser` varchar(100) NOT NULL,
-  `CorreoUser` varchar(100) NOT NULL,
-  `ContraUser` varchar(100) NOT NULL,
-  `CurpUser` varchar(20) NOT NULL,
-  `DomicilioUser` varchar(200) NOT NULL,
-  `FotoUser` varchar(100) NOT NULL,
-  `FechaNaciUser` date NOT NULL,
-  `CelulaUser` int(11) NOT NULL
+  `IdUsuarios` int(11) NOT NULL,
+  `IdTipo` int(11) NOT NULL,
+  `Nombre` varchar(100) NOT NULL,
+  `Apellidos` varchar(100) NOT NULL,
+  `Correo` varchar(100) NOT NULL,
+  `Contra` varchar(100) NOT NULL,
+  `Curp` varchar(20) NOT NULL,
+  `Domicilio` varchar(200) NOT NULL,
+  `Foto` varchar(100) NOT NULL,/**Foto???*/
+  `FechaNacimiento` date NOT NULL,
+  `Celular` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
