@@ -49,6 +49,10 @@
                         <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action" style="border-radius: 15px;"><a href="../View/Usuario/Inicio.html" class="white-text">Ingresar</a>
                             <i class="material-icons right">send</i>
                         </button>
+                        <br><br>
+                        <div  style="text-align: center">
+                            <a href="Registro_Usuario.html">¿No tienes cuenta aun?</a>
+                        </div>
                         <br><br><br>
                     </div>       
                 </div>

@@ -30,7 +30,7 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="Registro_Usuario.html">Registro Usuario</a></li>
           <li><a href="RegistroMedico.html">Registro Médico</a></li>
-          <li><a href="Login.html">Iniciar Sesión</a></li>
+          <li><a href="Login.php">Iniciar Sesión</a></li>
         </ul>
       </div>
     </nav>
