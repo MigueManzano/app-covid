@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
     <main>
         <nav class="light-blue accent-4">
             <ul>
@@ -55,8 +54,6 @@
                                 </div>
                             </div>
 
-
-
                             <!-- Curp -->
                             <div class="row">
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
@@ -65,7 +62,7 @@
                                     <input type="text" id="Curp" class="validate" maxlength="18"
                                         style="text-transform: uppercase;" required>
                                     <label for="Curp">Curp</label>
-                                    <a href="https://www.curp-gratis.com.mx/consulta-curp" target="_blank">¿No conoces
+                                    <a href="https://www.gob.mx/curp/" target="_blank">¿No conoces
                                         tu curp?</a>
                                 </div>
 
@@ -79,12 +76,8 @@
                                 </div>
                             </div>
 
-
-
-
-                          <!-- fecha de Nacimiento -->
+                        <!-- fecha de Nacimiento -->
                             <div class="row">
-                         
                                 
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">event_available
@@ -97,20 +90,18 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">email
                                     </i>
-                                    <input type="text" id="Email" class="validate" required>
-                                    <label for="Email">Correo</label>
+                                    <input type="text" id="email" class="validate" required>
+                                    <label for="email">Correo</label>
                                 </div>
                             </div>
-
-
 
                             <!-- Contraseña -->
                             <div class="row">
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock
                                     </i>
-                                    <input type="text" id="Password" class="validate" required>
-                                    <label for="Password">Contraseña</label>
+                                    <input type="text" id="password" class="validate" required>
+                                    <label for="password">Contraseña</label>
                                 </div>
 
                                 <!-- Confirma contra -->
@@ -122,11 +113,7 @@
                                 </div>
                             </div>
 
-
-
-                           
                             <div class="row">
-                               
 
                                 <!-- Foto de perfil -->
                                 <div class="file-field input-field col s10 m4 offset-s1 offset-m1">
@@ -140,14 +127,11 @@
                                 </div>
                             </div>
 
-
-
                             <!-- Boton de registrar -->
                             <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action"
                                 style="border-radius: 20px;"><a href="index.html"></a> Confirmar
                                 <i class="material-icons right">send</i>
                                 </a></button>
-
 
                             <br><br>
                         </div>
@@ -175,6 +159,7 @@
                 weekdaysAbbrev: ['D', 'L', 'M', 'M', 'J', 'V', 'S']
             }
         })
+
         //------------------------------Timepicker--------------------------------//
         var elems = document.querySelectorAll('.timepicker');
         var instances = M.Timepicker.init(elems, {

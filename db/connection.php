@@ -16,4 +16,5 @@ if($conexion){
 }else{
     die("Conexión fallida: " . $conexion->connect_error);
     }
+    
 ?>

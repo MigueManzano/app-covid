@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-      <!---Archivos materialize-->
+    <!---Archivos materialize-->
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="input-field col s10 m8 offset-s1 offset-m2">
                                 <i class="material-icons prefix blue-text accent-4-text">email</i>                                <input type="text" class="validate" id="Email">
-                                <label for="Email">Correo </label>
+                                <label for="email">Correo </label>
                             </div>
                         </div>
 
@@ -41,8 +41,8 @@
                         <div class="row">
                                 <div class="input-field col s10 m8 offset-s1 offset-m2">
                                     <i class="material-icons prefix blue-text accent-4-text">lock</i>                               
-                                    <input type="text" class="validate" id="Password">
-                                    <label for="Password">Contraseña</label>
+                                    <input type="text" class="validate" id="password">
+                                    <label for="password">Contraseña</label>
                                 </div>
                         </div>
 
