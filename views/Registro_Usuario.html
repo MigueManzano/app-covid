@@ -17,6 +17,9 @@
 
     <!---Inicializa icons-------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../controllers/controladorRegistroUser.js"></script>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +32,7 @@
             </a>
         </nav>
 
-        <form action="">
+        <div>
             <div class="container">
                 <!-- Formulario -->
                 <div class="row">
@@ -40,18 +43,18 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">face
                                     </i>
-                                    <input type="text" id="Nombre" class="validate" style="text-transform: capitalize;"
+                                    <input type="text" id="nombre" name="nombre" class="validate" style="text-transform: capitalize;"
                                         required>
-                                    <label for="Nombre">Nombre(s)</label>
+                                    <label for="nombre">Nombre(s)</label>
                                 </div>
 
                                 <!-- Apellido -->
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">format_color_text
                                     </i>
-                                    <input type="text" id="Apellidos" class="validate"
+                                    <input type="text" id="apellidos" name="apellidos" class="validate"
                                         style="text-transform: capitalize;" required>
-                                    <label for="Apellidos">Apellidos</label>
+                                    <label for="apellidos">Apellidos</label>
                                 </div>
                             </div>
 
@@ -62,7 +65,7 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock_outline
                                     </i>
-                                    <input type="text" id="Curp" class="validate" maxlength="18"
+                                    <input type="text" id="curp" name="curp" class="validate" maxlength="18"
                                         style="text-transform: uppercase;" required>
                                     <label for="Curp">Curp</label>
                                     <a href="https://www.curp-gratis.com.mx/consulta-curp" target="_blank">¿No conoces
@@ -73,9 +76,9 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">my_location
                                     </i>
-                                    <input type="text" class="validate" id="Domicilio"
+                                    <input type="text" class="validate" id="domicilio" name="domicilio"
                                         style="text-transform: capitalize;" required>
-                                    <label for="Domicilio">Domicilio</label>
+                                    <label for="domicilio">Domicilio</label>
                                 </div>
                             </div>
 
@@ -89,16 +92,16 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">event_available
                                     </i>
-                                    <input type="text" id="Fecha_Naci" name="Fecha" class="datepicker" required>
-                                    <label for="Fecha_Naci">Fecha de Nacimiento</label>
+                                    <input type="text" id="Fecha" name="Fecha" class="datepicker" required>
+                                    <label for="Fecha">Fecha de Nacimiento</label>
                                 </div>
 
                                 <!-- Correo -->
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">email
                                     </i>
-                                    <input type="text" id="Email" class="validate" required>
-                                    <label for="Email">Correo</label>
+                                    <input type="text" id="email" name="email" class="validate" required>
+                                    <label for="email">Correo</label>
                                 </div>
                             </div>
 
@@ -109,18 +112,18 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock
                                     </i>
-                                    <input type="password" id="Password" class="validate" required>
-                                    <label for="Password">Contraseña</label>
-                                    <i class=" material-icons prefix blue-text accent-4-text" id="mostrar">visibility</i>
+                                    <input type="password" id="password" name="password" class="validate" required>
+                                    <label for="password">Contraseña</label>
+                                    
                                 </div>
 
                                 <!-- Confirma contra -->
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock
                                     </i>
-                                    <input type="password" id="Password1" class="validate" required>
+                                    <input type="password" id="password1" class="validate" required>
                                     <label for="password">Confirmar Contraseña</label>
-                                    <i class=" material-icons prefix blue-text accent-3-text" id="mostrar2">visibility</i>
+                                    
                                     
                                 </div>
                             </div>
@@ -143,21 +146,20 @@
                                 </div>
                             </div>
 
-
+                            <!--a href="index.html"-->
 
                             <!-- Boton de registrar -->
-                            <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action"
-                                style="border-radius: 20px;"><a href="index.html"></a> Confirmar
+                            <button id="btnRegistrar" name="btnRegistrar" class="btn waves-effect waves-light light-blue accent-4" onclick="$(this).attr('disabled',true);registrar()" style="border-radius: 20px;"></a> Confirmar
                                 <i class="material-icons right">send</i>
                                 </a></button>
-
+                            <div name="resultado" id="resultado"></div>
 
                             <br><br>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
 
     </main>
 </body>
