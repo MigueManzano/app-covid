@@ -46,14 +46,14 @@
     <div class="slider">
       <ul class="slides">
         <li>
-          <img src="../img/Medico/wash-4934590_1920.jpg" alt="">
+          <img src="../resource/img/Medico/wash-4934590_1920.jpg" alt="">
           <div class="caption center-align">
           </div>
         </li>
 
         <!-- Segundo slider -->
         <li>
-          <img src="../img/Medico/protective-suit-5716753_1920.jpg" alt="">
+          <img src="../resource/img/Medico/protective-suit-5716753_1920.jpg" alt="">
           <div class="caption left-align">
           </div>
         </li>
@@ -61,7 +61,7 @@
 
         <!-- Tercer Slider -->
         <li>
-          <img src="../img/Medico/covid-19-4940487_1920.jpg" alt="">
+          <img src="../resource/img/Medico/covid-19-4940487_1920.jpg" alt="">
           <div class="caption right-align">
           </div>
         </li>
