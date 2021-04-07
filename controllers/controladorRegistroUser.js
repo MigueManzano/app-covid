@@ -4,7 +4,7 @@ function registrar(){
     var curp= $("#curp").val();
     var fecha= $("#Fecha").val();
     var email=$("#email").val();
-    var email=$("#domicilio").val();
+    var domicilio=$("#domicilio").val();
     var pass=$("#password").val();
     var pass1=$("#password1").val();
     if (usuario=="" || apellidos==""||curp=="" || fecha=="" || domicilio=="" || email==""|| pass==""|| pass1==""){
@@ -36,10 +36,11 @@ function registrar(){
             },
             success:  function (data) {
             $('#btnRegistrar').val("Guardar");
-            alert(data);
+            //alert(data);
             if(data){
                 $("#resultado").html("SE REGISTRO CON EXITO");
                 //location.reload(true);
+                
             }
             else{
                 $("#resultado").html("Ya esta registrado");
