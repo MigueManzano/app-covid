@@ -26,7 +26,7 @@
       <div class="nav-wrapper light-blue accent-4">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="Registro_Usuario.html">Registro Usuario</a></li>
+          <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
           <li><a href="RegistroMedico.html">Registro Médico</a></li>
           <li><a href="Login.php">Iniciar Sesión</a></li>
         </ul>
@@ -37,7 +37,7 @@
 
     <ul class="sidenav" id="mobile-demo">
       <li><img src="" alt="">LDC</li>
-      <li><a href="Registro_Usuario.html">Registro Usuario</a></li>
+      <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
       <li><a href="Registro.html">Registro Médico</a></li>
       <li><a href="Login.html">Iniciar Sesión</a></li>
     </ul>
