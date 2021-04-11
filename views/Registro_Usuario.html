@@ -141,30 +141,9 @@
                                     </div>
                                 </div>
 
-                                <!-- TIPO DE USUARIO -->
-                                <div class="input-field col s10 m4 offset-s1 offset-m1">
-                                    
-                                    <select class="validate" id="tipo" name="tipo" >
-                                        <option value="" disabled selected>Elije una opcion</option>
-                                        <option value="1">Paciente</option>
-                                        <option value="2">Medico</option>
-                                    </select>
-                                      <label>Tipo de usuario:</label>
-                                </div>
-                            </div>
-                             <!-- cedula -->
-                             <div class="row" style="display:none;" id="divCedula" name="divCedula">
-                                <div class="input-field col s10 m4 offset-s1 offset-m1">
-                                    <i class="material-icons prefix blue-text accent-4-text">lock_outline
-                                    </i>
-                                    <input type="text" id="cedula" name="cedula" class="validate" maxlength="18"
-                                        style="text-transform: uppercase;" required>
-                                    <label for="cedula">Cedula</label>
-                                    
-                                </div>
-
                                 
                             </div>
+                            
 
 
                             <!--a href="index.html"-->
@@ -222,15 +201,7 @@
     $(document).ready(function(){
     $('select').formSelect();
   });
-  /*cedula*/
-    $('select#tipo').on('change',function(){
-        var valor = $(this).val();
-        if(valor==2){
-            $('#divCedula').css("display", "block");
-        }else{
-            $('#divCedula').css("display", "none");
-        }
-    });
+  
   
 
 </script>
