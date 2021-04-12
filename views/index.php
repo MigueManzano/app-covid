@@ -114,7 +114,7 @@
 
     <!-- Parallax -->
     <div class="parallax-container">
-      <div class="parallax"><img src="../img/Citas/syringe-1884784_1920.jpg"></div>
+      <div class="parallax"><img src="../resource/img/Citas/syringe-1884784_1920.jpg"></div>
     </div>
 
 
