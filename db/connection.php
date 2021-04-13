@@ -1,20 +1,20 @@
 <?php
 
 //variables de la cadena de conexion a la BD
-$servidor = "127.0.0.1";
-$nombreusuario = "root";
-$password = "cardenas1501993";
-$db = "sistema_ldc";
+$servername = "127.0.0.1";
+$database = "sistema_ldc"; 
+$username = "root";
+$password = "cardenas1501993"; 
 
-//cadena de conexion a la BD
-$conexion = new mysqli($servidor, $nombreusuario, $password, $db);
-
-//condicional para corroborar que la conexion a sido correcta de caso contrario nos manda un error
-//de que la conexion a sido fallida
-if($conexion){
-    echo "conexion correcta...";
-}else{
-    die("Conexión fallida: " . $conexion->connect_error);
-    }
+try {
+    //cadena de conexion a la BD
+    $conne = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    echo "conexion con exito";
+    //$conne = null;
+} catch (PDOException $e) {
+    print "¡Error!: " . $e->getMessage() . "<br/>";
+    echo "error de conexion";
+    die();
+}
     
 ?>
