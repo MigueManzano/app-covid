@@ -36,10 +36,10 @@
     <!-- Barra deslizante lateral -->
 
     <ul class="sidenav" id="mobile-demo">
-      <li><img src="" alt="">LDC</li>
+      <li><img src="" alt="">MENU</li>
       <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
-      <li><a href="Registro.html">Registro Médico</a></li>
-      <li><a href="Login.html">Iniciar Sesión</a></li>
+      <li><a href="RegistroMedico.html">Registro Médico</a></li>
+      <li><a href="Login.php">Iniciar Sesión</a></li>
     </ul>
 
     <!-- Primer slider -->
