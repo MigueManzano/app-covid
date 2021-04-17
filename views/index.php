@@ -17,8 +17,6 @@
   <link rel="stylesheet" href="../css/index.css">
 </head>
 
-
-
 <body>
   <main>
 
@@ -28,7 +26,7 @@
       <div class="nav-wrapper light-blue accent-4">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="Registro_Usuario.html">Registro Usuario</a></li>
+          <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
           <li><a href="RegistroMedico.html">Registro Médico</a></li>
           <li><a href="Login.php">Iniciar Sesión</a></li>
         </ul>
@@ -38,24 +36,24 @@
     <!-- Barra deslizante lateral -->
 
     <ul class="sidenav" id="mobile-demo">
-      <li><img src="" alt="">LDC</li>
-      <li><a href="Registro_Usuario.html">Registro Usuario</a></li>
-      <li><a href="Registro.html">Registro Médico</a></li>
-      <li><a href="Login.html">Iniciar Sesión</a></li>
+      <li><img src="" alt="">MENU</li>
+      <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
+      <li><a href="RegistroMedico.html">Registro Médico</a></li>
+      <li><a href="Login.php">Iniciar Sesión</a></li>
     </ul>
 
     <!-- Primer slider -->
     <div class="slider">
       <ul class="slides">
         <li>
-          <img src="../img/Medico/wash-4934590_1920.jpg" alt="">
+          <img src="../resource/img/Medico/wash-4934590_1920.jpg" alt="">
           <div class="caption center-align">
           </div>
         </li>
 
         <!-- Segundo slider -->
         <li>
-          <img src="../img/Medico/protective-suit-5716753_1920.jpg" alt="">
+          <img src="../resource/img/Medico/protective-suit-5716753_1920.jpg" alt="">
           <div class="caption left-align">
           </div>
         </li>
@@ -63,7 +61,7 @@
 
         <!-- Tercer Slider -->
         <li>
-          <img src="../img/Medico/covid-19-4940487_1920.jpg" alt="">
+          <img src="../resource/img/Medico/covid-19-4940487_1920.jpg" alt="">
           <div class="caption right-align">
           </div>
         </li>
@@ -116,7 +114,7 @@
 
     <!-- Parallax -->
     <div class="parallax-container">
-      <div class="parallax"><img src="../img/Citas/syringe-1884784_1920.jpg"></div>
+      <div class="parallax"><img src="../resource/img/Citas/syringe-1884784_1920.jpg"></div>
     </div>
 
 
