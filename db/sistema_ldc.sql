@@ -32,8 +32,11 @@ CREATE TABLE `citas` (
   `IdUsuario` int(11) NOT NULL,
   `IdMedico` int(11) NOT NULL,
   `FechaCita` date NOT NULL,
-  `HoraCita` time NOT NULL,
-  `CodigoCita` int(11) NOT NULL
+  `IdHorario` int(11) NOT NULL,
+  `CodigoCita` int(11) NOT NULL,
+  `FechaCreacion` int(11) NOT NULL,
+  `Estatus` char(1) NOT NULL
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -187,7 +190,34 @@ CREATE TABLE `usuarios` (
   `FechaNacimiento` date NOT NULL,
   `Celular` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*estructura de la tabla medicos*/
 
+CREATE TABLE `medicos` (
+  `Idmedico` int(11) NOT NULL,
+  `Nombre` varchar(100) NOT NULL,
+  `Apellidos` varchar(100) NOT NULL,
+  `cedula` varchar(100) NOT NULL,
+  `Correo` varchar(100) NOT NULL,
+  `Contra` varchar(100) NOT NULL,
+  `Curp` varchar(20) NOT NULL,
+  `Domicilio` varchar(200) NOT NULL,
+  `Foto` varchar(100) NOT NULL,/**Foto???*/
+  `FechaNacimiento` date NOT NULL,
+  `Celular` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+---catalogo de horarios
+CREATE TABLE `horarioscat` (
+  `IdHorario` int(11) NOT NULL,
+  `descripcion` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `horarioscat` (`idHorario`, `descripcion`) VALUES("", "08:00 - 10:00"),
+  ("", "10:00 - 12:00"),
+  ("", "01:00 - 03:00"),
+  ("", "03:00 - 05:00"),
+  ("", "05:00 - 07:00"),
+  ("", "07:00 - 08:00")
 --
 -- Volcado de datos para la tabla `usuarios`
 --
