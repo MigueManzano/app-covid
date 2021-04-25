@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--kevin quevedo-->
 
+<!--kevin quevedo-->
+<!--inicio head -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +28,8 @@
             <div class="nav-wrapper light-blue accent-4">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
-                    <li><a href="RegistroMedico.html">Registro Médico</a></li>
+                    <li><a href="RegistroUsuario.php">Registro Usuario</a></li>
+                    <li><a href="RegistroMedico.php">Registro Médico</a></li>
                     <li><a href="Login.php">Iniciar Sesión</a></li>
                 </ul>
             </div>
@@ -38,8 +39,8 @@
 
         <ul class="sidenav" id="mobile-demo">
             <li><img src="" alt="">MENU</li>
-            <li><a href="RegistroUsuario.html">Registro Usuario</a></li>
-            <li><a href="RegistroMedico.html">Registro Médico</a></li>
+            <li><a href="RegistroUsuario.php">Registro Usuario</a></li>
+            <li><a href="RegistroMedico.php">Registro Médico</a></li>
             <li><a href="Login.php">Iniciar Sesión</a></li>
         </ul>
 
@@ -176,36 +177,24 @@
             </section>
         </div>
 
+        <!--inicio footer -->
 
+<?php 
+include '../views/footer.php';
+?>
+<!-- fin footer -->
 
-        <!-- Footer de la pagina -->
-        <footer class="page-footer blue">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Company Bio</h5>
-                        <p class="grey-text text-lighten-4">.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container center-align">
-                    Copyright 2021 © <a class="white-text text-indigo-4" href="">Todos los derechos reservados</a>
-                </div>
-            </div>
-        </footer>
     </main>
 </body>
 
 
-<!--inicio footer -->
+<!--inicio script -->
 
 <?php 
-include 'footer.php';
+include '../views/script.php';
 ?>
 
-<!-- fin footer -- >
+<!-- fin script -- >
 
 
 </html>
