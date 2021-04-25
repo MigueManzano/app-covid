@@ -22,7 +22,7 @@
     include('../../models/medicosCitas.php');
 ?>
 
-<body>
+<body id="body" name="body">
     <main>
         <nav class="light-blue accent-4">
             <!-- navbar content here  -->
@@ -109,7 +109,7 @@
                         <div class="input-field">
                             <i class="material-icons prefix blue-text accent-4-text">event_available
                             </i>
-                            <input type="date" min="<?=$fecha;?>" required disabled id="fecha" name="fecha" onchange="fechin()">
+                            <input type="date" min="<?=$fecha;?>" required disabled id="fecha" name="fecha">
                             <label for="Fecha_Naci">Día de la cita</label>
                         </div>
                     </div>
@@ -118,9 +118,19 @@
                     <div class="col s12 m3 offset-m2">
                         <div class="input-field" >
                             <i class="material-icons prefix blue-text accent-4-text">access_time</i>
-                            <select id="horario" name="horario" >
-                                <option value="" disabled selected>Elige una hora: </option>
-                                
+                            
+                            <select id="horario" name="horario" onchange="boton()" >
+                            <option value="" disabled selected>ELIGE LA HORA: </option>
+                            <?php
+                                    foreach ($horario as $i => $hor){
+                                    ?>
+                                    <option value= "<?php echo $hor->id; ?>" name='<?="h-" , $hor->id;?>'
+                                        id='<?="h-" , $hor->id;?>'
+                                        data-id='<?=$hor->id;?>'
+                                        data-nombre='<?=$hor->descripcion;?>' ><?=utf8_encode($hor->descripcion); ?></option>
+                                    <?php
+                                    };
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -129,7 +139,7 @@
                         <div class="col s12 m2 offset-m1 offset-s3">
                             <br>
                             <button class="btn waves-effect waves-light light-blue accent-4 modal-trigger"
-                                href="#modal1" type="submit" name="action" style="border-radius: 20px;" disabled>Aceptar</button>
+                            data-target="modal1" type="submit" name="aceptar" id="aceptar" style="border-radius: 20px;" onclick="agregar()" disabled>Aceptar</button>
                         </div>
                     </div>
 
@@ -138,7 +148,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col s12 m8 offset-s1 offset-m2">
-                                <div id="modal1" class="modal">
+                                <div id="modal1" name="modal1" class="modal">
                                     <div class="modal-content">
                                         <h5 class=""
                                             style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
@@ -210,9 +220,9 @@
 
         // Or with jQuery
 
-        $(document).ready(function () {
-            $('horario').formSelect();
-        });
+        //$(document).ready(function () {
+          //  $('horario').formSelect();
+        //});
     </script>
 
     <!-- Script del calendario en español -->
@@ -252,9 +262,9 @@
 
         // Or with jQuery
 
-        $(document).ready(function () {
+        /*$(document).ready(function () {
             $('.modal').modal();
-        });
+        });*/
     </script>
 </body>
 

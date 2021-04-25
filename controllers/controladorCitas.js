@@ -8,7 +8,7 @@ function medi(){
     $("#apellidoMed").html("Apellido: "+ apellido);
     $("#fecha").attr('disabled',false);
 }
-function fechin(){
+/*function fechin(){
     var medico=$("#medico").val();
     var fecha=$("#fecha").val();
     var parametros = {
@@ -21,24 +21,28 @@ function fechin(){
       type:  'post',
       dataType: 'json',
       beforeSend: function () {
-        $('#action').val("Conectando...");
+        $('#aceptar').val("Conectando...");
        },
       success:  function (data) {
-        $('#action').val('aceptar');
+        $('#aceptar').val('aceptar');
        // alert(data[1].descripcion);
         select = $("#horario");
         var x = document.getElementById("horario");
         n=Object.keys(data).length;
-        var i=0;
+        var i=0;   
+    
+       
         while(n>=0){
             id=data[i].id;
-            descripcion=data[i].descripcion;
-            alert (descripcion);
-            
-            //var option = document.createElement("option");
-            //option.value=id;
-            //option.text = descripcion;
-            //x.add(option);
+            //descripcion=data[i].;
+            alert (id);
+            $("#horario option[value='"+id+"']").remove();
+            $("#h-"+id).css("display", "block");
+           $("#h-"+id).removeAttr('disabled');
+           $("#h-"+id).removeClass('disabled');
+
+           $('li').removeClass('disabled');
+           // alert("#h-"+id);
             n--;
             i++;
         }
@@ -46,7 +50,51 @@ function fechin(){
        },
        error: function(){
         alert("No se establecio comunicaion con el servidor.");
-        $("#action").attr('disabled',false);
+        $("#aceptar").attr('disabled',false);
+       }
+      });
+    
+}*/
+function boton(){
+    $("#aceptar").attr('disabled',false);
+   
+}
+
+
+function agregar(){
+    var medico=$("#medico").val();
+    var fecha=$("#fecha").val();
+    var horario=$("#horario").val();
+    var parametros = {
+        medico : medico,
+        fecha : fecha,
+        horario : horario
+    };
+    
+    
+    $.ajax({
+      data:  parametros,
+      url:   '../../models/agregarCitas.php',
+      type:  'post',
+      beforeSend: function () {
+        $('#aceptar').val("Conectando...");
+       },
+      success:  function (data) {
+        $('#aceptar').val('aceptar');
+       if(data==0){
+        $('#modal1').show();
+        //$('#modal1').modal('open'); 
+       }else{
+           
+           $('#modal1').hide();
+           $('#body').removeAttr( 'style' );
+           alert("ya esta registrada");
+       }
+        
+       },
+       error: function(){
+        alert("No se establecio comunicaion con el servidor.");
+        $("#aceptar").attr('disabled',false);
        }
       });
     
