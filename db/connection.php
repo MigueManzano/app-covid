@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 //variables de la cadena de conexion a la BD
 <<<<<<< HEAD
 $servidor = "127.0.0.1";
@@ -24,17 +25,28 @@ $servername = "127.0.0.1";
 $database = "sistema_ldc"; 
 $username = "root";
 $password = "cardenas1501993"; 
+=======
+$password = 'cardenas1501993';
+$usuario = 'root';
+$nombrebd = 'sistema_ldc';
+>>>>>>> 2a50a3e60878fa1afa79d6040fc918ea253c6586
 
 try {
-    //cadena de conexion a la BD
-    $conne = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    echo "conexion con exito";
-    //$conne = null;
-} catch (PDOException $e) {
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    echo "error de conexion";
-    die();
+    //code...
+    $bd = new PDO(
+        'mysql:host=localhost;
+        dbname='.$nombrebd,
+        $usuario,
+        $password
+    );
+} catch (Exception $e) {
+    //throw $th;
+    echo "Error de conexion ".$e->getMessage();
 }
+<<<<<<< HEAD
     
 >>>>>>> 0eeb656fabc0b6619d3c5c36b39a719fae56f4f4
+=======
+
+>>>>>>> 2a50a3e60878fa1afa79d6040fc918ea253c6586
 ?>
