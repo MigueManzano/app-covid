@@ -109,7 +109,7 @@
                         <div class="input-field">
                             <i class="material-icons prefix blue-text accent-4-text">event_available
                             </i>
-                            <input type="date" min="<?=$fecha;?>" required disabled id="fecha" name="fecha">
+                            <input type="date" min="<?=$fecha;?>" required disabled onchange="fechaC()" id="fecha" name="fecha">
                             <label for="Fecha_Naci">Día de la cita</label>
                         </div>
                     </div>
@@ -185,9 +185,9 @@
                                                     <p id="apellidoMed" name="apellidoMed">Apellido:</p>
                                                     
                                                     <br>
-                                                    <p>Hora de la cita: </p>
+                                                    <p id="horaCi" name="horaCi">Hora de la cita: </p>
                                                     <br>
-                                                    <p>Fecha de Cita: </p>
+                                                    <p id="fechaCita" name="fechaCita">Fecha de Cita: </p>
                                                 </div>
                                             </div>
                                         </div>

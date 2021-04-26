@@ -55,8 +55,16 @@ function medi(){
       });
     
 }*/
+function fechaC(){
+    var fecha=$("#fecha").val();
+    $("#fechaCita").html("Fecha de Cita: "+ fecha);
+
+}
 function boton(){
     $("#aceptar").attr('disabled',false);
+    var horario=$("#horario option:selected").text();
+    $("#horaCi").html("Hora de la Cita: "+ horario);
+    
    
 }
 
@@ -84,6 +92,7 @@ function agregar(){
        if(data==0){
         $('#modal1').show();
         //$('#modal1').modal('open'); 
+        
        }else{
            
            $('#modal1').hide();
@@ -95,6 +104,7 @@ function agregar(){
        error: function(){
         alert("No se establecio comunicaion con el servidor.");
         $("#aceptar").attr('disabled',false);
+        $("#horaCi").html("Hora de la cita: ");
        }
       });
     
