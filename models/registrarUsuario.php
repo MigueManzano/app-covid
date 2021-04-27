@@ -9,11 +9,11 @@
     $pass      =(isset($_POST['pass'])      and trim($_POST['pass'])!="")     ? $_POST['pass']:"";
     $act       = 'A';//a= activo B=baja*/
     //1= usuario normal
-    $sqlUsuarios="SELECT * FROM usuarios WHERE Nombre='$usuario'";
+    $sqlUsuarios="SELECT * FROM usuarios WHERE Correo='$email'";
     $consulta=$conne->query($sqlUsuarios);
     
     //echo $sqlUsuarios;
-    if ($consulta->fetch()) { 
+    if ($consulta->fetchColumn() > 0) { 
      echo "Este usuario ya existe";
      echo "1";
     }

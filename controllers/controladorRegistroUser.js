@@ -37,7 +37,7 @@ function registrar(){
             success:  function (data) {
             $('#btnRegistrar').val("Guardar");
             //alert(data);
-            if(data="0"){
+            if(data=="0"){
                 $("#resultado").html("SE REGISTRO CON EXITO");
                 //location.reload(true); 
                 location.href='../views/Login.php';
