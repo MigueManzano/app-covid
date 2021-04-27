@@ -49,22 +49,17 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">face
                                     </i>
-<<<<<<< HEAD:views/RegistroUsuario.html
-<<<<<<< HEAD:views/Registro_Usuario.html
                                     <input type="text" id="nombre" name="nombre" class="validate" style="text-transform: capitalize;"
                                         required>
                                     <label for="nombre">Nombre(s)</label>
-=======
                                     <input  type="text" id="Nombre" class="validate" style="text-transform: capitalize;"
                                     title="Ingrese su nombre. Máximo 9 caracteres (solamente letras)" pattern="[a-zA-Z]{1,9}" required>
-=======
+
                                     <input type="text" name="textNombre" id="Nombre" class="validate"
                                         style="text-transform: capitalize;"
                                         title="Ingrese su nombre. Máximo 20 caracteres (solamente letras)"
                                         pattern="[a-zA-Z]{1,20}" required>
->>>>>>> 2a50a3e60878fa1afa79d6040fc918ea253c6586:views/RegistroUsuario.php
                                     <label for="Nombre">Nombre(s)</label>
->>>>>>> 0eeb656fabc0b6619d3c5c36b39a719fae56f4f4:views/RegistroUsuario.html
                                 </div>
 
                                 <!-- Apellido -->
@@ -134,7 +129,6 @@
 <<<<<<< HEAD:views/RegistroUsuario.html
 <<<<<<< HEAD:views/Registro_Usuario.html
                                     <input type="text" id="email" name="email" class="validate" required>
-=======
                                     <input type="text" id="email" class="validate" required name="clien-email" maxlength="50" title="Ingrese un correo valido.">
 >>>>>>> 0eeb656fabc0b6619d3c5c36b39a719fae56f4f4:views/RegistroUsuario.html
 =======
@@ -216,18 +210,6 @@
                                 <i class="material-icons right">send</i>
                                 </a></button>
                             <div name="resultado" id="resultado"></div>
-=======
-                            <!-- Boton de registrar -->
-                            <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action"
-                                style="border-radius: 20px;"><a href="index.php"></a> Confirmar
-=======
-                            </div> -->
-
-                            <!-- Boton de registrar -->
-                            <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="enviar"
-                                style="border-radius: 20px;"><input type="hidden" name="enviar">
-                                <a href="prueba.php"></a> Confirmar
->>>>>>> 2a50a3e60878fa1afa79d6040fc918ea253c6586:views/RegistroUsuario.php
                                 <i class="material-icons right">send</i>
                                 </a></button>
 >>>>>>> 0eeb656fabc0b6619d3c5c36b39a719fae56f4f4:views/RegistroUsuario.html
