@@ -11,7 +11,7 @@
     session_start();
     $_SESSION['nombre'] =$rows["Nombre"];
     $_SESSION['apellidos'] =$rows["Apellidos"];
-    $_SESSION['correo'] = $rows["Correo"];
+    $_SESSION['correo'] = $rows["Correo"];//Casi terminado
     $_SESSION['tipo'] = $rows["IdTipo"];
       
     echo "1";
