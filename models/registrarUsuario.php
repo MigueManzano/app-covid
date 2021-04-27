@@ -15,14 +15,14 @@
     //echo $sqlUsuarios;
     if ($consulta->fetch()) { 
      echo "Este usuario ya existe";
-     return false;
+     echo "1";
     }
     else{
       //echo"2";
       $insertar = "INSERT INTO usuarios (IdTipo, Nombre, Apellidos, Correo, Contra, Curp, Domicilio, FechaNacimiento, estatus) VALUES('1','$usuario', '$apellidos', '$email', '$pass', '$curp','$domicilio','$fecha', '$act')";  
       //echo $insertar;
       $insert=$conne->query($insertar);
-       return true;
+       echo "0" ;
     }
 
 ?>

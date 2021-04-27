@@ -7,6 +7,7 @@ function registrar(){
     var domicilio=$("#domicilio").val();
     var pass=$("#password").val();
     var pass1=$("#password1").val();
+    
     if (usuario=="" || apellidos==""||curp=="" || fecha=="" || domicilio=="" || email==""|| pass==""|| pass1==""){
         $("#resultado").html("DEBES RELLENAR TODOS LOS CAMPOS");
         $("#btnRegistrar").attr('disabled',false);
@@ -16,7 +17,6 @@ function registrar(){
         $("#btnRegistrar").attr('disabled',false);
         }
         else{
-            alert("bien");
         //var contra=hex_md5(pass);
         var parametros = {
             usuario : usuario,
@@ -37,9 +37,10 @@ function registrar(){
             success:  function (data) {
             $('#btnRegistrar').val("Guardar");
             //alert(data);
-            if(data){
+            if(data="0"){
                 $("#resultado").html("SE REGISTRO CON EXITO");
-                //location.reload(true);
+                //location.reload(true); 
+                location.href='../views/Login.php';
                 
             }
             else{
