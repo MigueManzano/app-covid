@@ -13,10 +13,16 @@
 
     <!---Inicializa icons-------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../controllers/controladorCitas.js"></script>
     <title>Citas</title>
 </head>
+<?php
+    include('../../models/medicosCitas.php');
+?>
 
-<body>
+<body id="body" name="body">
     <main>
         <nav class="light-blue accent-4">
             <!-- navbar content here  -->
@@ -29,7 +35,7 @@
                     <div class="background">
                         <img src="">
                     </div>
-                    <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
+                    <a href="#user"><img class="circle" src="../../resource/img/Medico/doctor-2346235_1280.jpg"></a>
                 </div>
             </li>
             <br>
@@ -79,36 +85,61 @@
         <div class="container">
             <div class="row">
                 <form action="">
+                    <div class="col s12 m4 offset-m2">
+                        <div class="input-field">
+                            <i class="material-icons prefix blue-text accent-2-text">person</i>
+                            <select name="medico" id="medico" onchange="medi()" >
+                                <option value="" disabled selected>MEDICOS DISPONIBLES: </option>
+                                <?php
+                                    foreach ($medicosCat as $i => $med){
+                                    ?>
+                                    <option value= "<?php echo $med->id; ?>" 
+                                        id='<?=$med->id;?>'
+                                        data-id='<?=$med->id;?>'
+                                        data-nombre='<?=$med->nombre;?>'
+                                        data-apellido='<?=$med->apellido;?>'><?=utf8_encode($med->nombre); ?></option>
+                                    <?php
+                                    };
+                                ?>
+
+                            </select>
+                        </div>
+                    </div>
                     <div class="col s12 m3 offset-m2">
                         <div class="input-field">
                             <i class="material-icons prefix blue-text accent-4-text">event_available
                             </i>
-                            <input type="text" id="Fecha_Naci" name="Fecha" class="datepicker" required>
+                            <input type="date" min="<?=$fecha;?>" required disabled onchange="fechaC()" id="fecha" name="fecha">
                             <label for="Fecha_Naci">Día de la cita</label>
                         </div>
                     </div>
 
                     <!-- Eleccion del dia para consulta -->
-                    <div class="col s12 m3 offset-m1">
-                        <div class="input-field">
+                    <div class="col s12 m3 offset-m2">
+                        <div class="input-field" >
                             <i class="material-icons prefix blue-text accent-4-text">access_time</i>
-                            <select name="" id="">
-                                <option value="" disabled selected>Elige una hora: </option>
-                                <option value="1">8:00 - 10:00</option>
-                                <option value="2">10:00 - 12:00</option>
-                                <option value="3">1:00 - 3:00</option>
-                                <option value="4">3:00 - 5:00</option>
-                                <option value="5">5:00 - 7:00</option>
-                                <option value="6">7:00 - 8:00</option>
+                            
+                            <select id="horario" name="horario" onchange="boton()" >
+                            <option value="" disabled selected>ELIGE LA HORA: </option>
+                            <?php
+                                    foreach ($horario as $i => $hor){
+                                    ?>
+                                    <option value= "<?php echo $hor->id; ?>" name='<?="h-" , $hor->id;?>'
+                                        id='<?="h-" , $hor->id;?>'
+                                        data-id='<?=$hor->id;?>'
+                                        data-nombre='<?=$hor->descripcion;?>' ><?=utf8_encode($hor->descripcion); ?></option>
+                                    <?php
+                                    };
+                                ?>
                             </select>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col s12 m2 offset-m1 offset-s4">
+                        <div class="col s12 m2 offset-m1 offset-s3">
                             <br>
                             <button class="btn waves-effect waves-light light-blue accent-4 modal-trigger"
-                                href="#modal1" type="submit" name="action" style="border-radius: 20px;">Aceptar</button>
+                            data-target="modal1" type="submit" name="aceptar" id="aceptar" style="border-radius: 20px;" onclick="agregar()" disabled>Aceptar</button>
                         </div>
                     </div>
 
@@ -117,7 +148,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col s12 m8 offset-s1 offset-m2">
-                                <div id="modal1" class="modal">
+                                <div id="modal1" name="modal1" class="modal">
                                     <div class="modal-content">
                                         <h5 class=""
                                             style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
@@ -145,18 +176,18 @@
                                         <div class="row">
                                             <div class="card horizontal">
                                                 <div class="card-image">
-                                                    <img src="../../img/doctor/retrato-femenino-doctor-pasillo-hospital_53419-7869.jpg"
+                                                    <img src="../../resource/img/doctor/retrato-femenino-doctor-pasillo-hospital_53419-7869.jpg"
                                                         alt="" class="responsive-img" width="8px" height="270px">
                                                 </div>
                                                 <div class="card-content">
-                                                    <p>Nombre: </p>
+                                                    <p id="nombreMed" name="nombreMed">Nombre:</p>
                                                     <br>
-                                                    <p>Apellido: </p>
+                                                    <p id="apellidoMed" name="apellidoMed">Apellido:</p>
                                                     
                                                     <br>
-                                                    <p>Hora de la cita: </p>
+                                                    <p id="horaCi" name="horaCi">Hora de la cita: </p>
                                                     <br>
-                                                    <p>Fecha de Cita: </p>
+                                                    <p id="fechaCita" name="fechaCita">Fecha de Cita: </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,9 +220,9 @@
 
         // Or with jQuery
 
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
+        //$(document).ready(function () {
+          //  $('horario').formSelect();
+        //});
     </script>
 
     <!-- Script del calendario en español -->
@@ -231,9 +262,9 @@
 
         // Or with jQuery
 
-        $(document).ready(function () {
+        /*$(document).ready(function () {
             $('.modal').modal();
-        });
+        });*/
     </script>
 </body>
 
