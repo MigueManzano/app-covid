@@ -5,9 +5,11 @@
 
   
   $sqlCon="SELECT * FROM usuarios WHERE Correo='$correo' and Contra='$contra' ";
+  $sqlCon2="SELECT * FROM medicos WHERE Correo='$correo' and Contra='$contra' ";
   
   $consulta=$conne->query($sqlCon);
-  if ($rows = $consulta->fetch()) { 
+  $consulta2=$conne->query($sqlCon2);
+  if ($rows = $consulta->fetch() ||$rows = $consulta2->fetch()) { 
     session_start();
     $_SESSION['nombre'] =$rows["Nombre"];
     $_SESSION['apellidos'] =$rows["Apellidos"];
@@ -16,7 +18,10 @@
       
     echo "1";
     
-  }else{
+  }
+  
+  else{
+      
     
     echo "3";
    // echo $insertar;
