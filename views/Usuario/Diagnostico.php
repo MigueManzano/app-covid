@@ -1,3 +1,8 @@
+<?php
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +38,7 @@
                     <div class="background">
                         <img src="">
                     </div>
-                    <a href="#user"><img class="circle" src="../resouce/img/Medico/doctor-2346235_1280.jpg"></a>
+                    <a href="#user"><img class="circle" src="../../img/Medico/doctor-2346235_1280.jpg"></a>
                 </div>
             </li>
             <br>
@@ -140,10 +145,8 @@
                                                 <option value="10">Epilepsia</option>
                                                 <option value="11">Enfermedad del corazón</option>
                                                 <option value="12">VIH/SIDA</option>
-                                                <option value="13">Transtornos de humor (bipolar. ciclotímico y
-                                                    depresión)</option>
-                                                <option value="14">Esclerosis múltiple</option>
-                                                <option value="15">Mal de Parkinson</option>
+                                                <option value="13">Esclerosis múltiple</option>
+                                                <option value="14">Mal de Parkinson</option>
                                             </select>
                                             <label>Selecciona cual enfermedad crónica padeces.</label>
                                         </div>
@@ -164,76 +167,114 @@
 
                                             <p class="left-align">¿Ha presentado alguno de estos síntomas?</p>
                                             <ul class="left-align">
-                                              <div class="checkboxes">
-                                                
-                                                  <div class="input-field col s9 m10 offset-s1 offset-m1">
-                                                    <select>
-                                                      <option value="" disabled selected>Elige una opción</option>
-                                                      <option value="1">Si</option>
-                                                      <option value="2">No</option>
-                                                    </select>
-                                                    <label>Tos</label>
-                                                  </div>
-                                               
-                      
-                                                  <div class="input-field col s9 m10 offset-s1 offset-m1">
-                                                    <select>
-                                                      <option value="" disabled selected>Elige una opción</option>
-                                                      <option value="1">Si</option>
-                                                      <option value="2">No</option>
-                                                    </select>
-                                                    <label>Dolores Musculares</label>
-                                                  </div>
-                      
-                                                  <div class="input-field col s9 m10 offset-s1 offset-m1">
-                                                    <select>
-                                                      <option value="" disabled selected>Elige una opción</option>
-                                                      <option value="1">Si</option>
-                                                      <option value="2">No</option>
-                                                    </select>
-                                                    <label>Dolor de Cabeza</label>
-                                                  </div>
-                      
-                                                  <div class="input-field col s9 m10 offset-s1 offset-m1">
-                                                    <select>
-                                                      <option value="" disabled selected>Elige una opción</option>
-                                                      <option value="1">Si</option>
-                                                      <option value="2">No</option>
-                                                    </select>
-                                                    <label>Dolor de Garganta</label>
-                                                  </div>
-                      
-                                                  <div class="input-field col s9 m10 offset-s1 offset-m1">
-                                                    <select>
-                                                      <option value="" disabled selected>Elige una opción</option>
-                                                      <option value="1">Si</option>
-                                                      <option value="2">No</option>
-                                                    </select>
-                                                    <label>Dolor en las Articulaciones</label>
-                                                  </div>
-                                                  <div class="input-field col s9 m10 offset-s1 offset-m1">
-                                                    <select>
-                                                      <option value="" disabled selected>Elige una opción</option>
-                                                      <option value="1">Si</option>
-                                                      <option value="2">No</option>
-                                                    </select>
-                                                    <label>Dificultad para respirar</label>
-                                                  </div>
-                                              </div>
+                                                <div class="checkboxes">
+
+                                                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                                                        <select>
+                                                            <option value="" disabled selected>Elige una opción</option>
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                        <label>Tos</label>
+                                                    </div>
+
+
+                                                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                                                        <select>
+                                                            <option value="" disabled selected>Elige una opción</option>
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                        <label>Dolores Musculares</label>
+                                                    </div>
+
+                                                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                                                        <select>
+                                                            <option value="" disabled selected>Elige una opción</option>
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                        <label>Dolor de Cabeza</label>
+                                                    </div>
+
+                                                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                                                        <select>
+                                                            <option value="" disabled selected>Elige una opción</option>
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                        <label>Dolor de Garganta</label>
+                                                    </div>
+
+                                                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                                                        <select>
+                                                            <option value="" disabled selected>Elige una opción</option>
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                        <label>Dolor en las Articulaciones</label>
+                                                    </div>
+                                                    <div class="input-field col s9 m10 offset-s1 offset-m1">
+                                                        <select>
+                                                            <option value="" disabled selected>Elige una opción</option>
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                        <label>Dificultad para respirar</label>
+                                                    </div>
+                                                </div>
 
                                             </ul>
                                         </div>
                                     </div>
 
 
-                                    <!-- Probabilidad -->
+                                    <!-- Boton de calcular probabilidad -->
+                                    <div class="input-field ">
+                                        <a href="#"><button class="btn waves-effect waves-light light-blue accent-4"
+                                                type="submit" name="action" style="border-radius: 25px;">Calcular
+                                                <i class="material-icons right">cached</i>
+                                            </button> </a>
+                                    </div>
+
                                     <p class="center align"
                                         style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
                                         La probabilidad de
                                         padecer Covid-19 es de: </p>
 
                                     <p class="center">80%</p>
+                                    <section class="">
+                                        <div class="row">
+                                            <div class="col s12 m6">
+                                                <div class="row">
 
+                                                    <!-- Boton de hospitales disponibles para realizarse la prueba de covid -->
+                                                    <button class="btn waves-effect waves-light light-blue accent-4"
+                                                        type="submit" name="action" style="border-radius: 25px;"> <a
+                                                            href="../Usuario/Inicio.html"
+                                                            class="white-text"></a>Hospitales
+                                                        <i class="material-icons right">local_hospital
+                                                        </i>
+                                                    </button> </a>
+                                                </div>
+                                            </div>
+                                            <!-- Boton para agendar cita -->
+                                            <div class="row">
+                                                <div class="col s12 m6">
+                                                    <div class="row">
+
+                                                        <!-- Boton que lleva a la ventana de citas -->
+                                                        <button class="btn waves-effect waves-light light-blue accent-4"
+                                                            type="submit" name="action" style="border-radius: 25px;"><a
+                                                                href="../Usuario/Citas.html"
+                                                                class="white-text"></a>Agendar cita
+                                                            <i class="material-icons right">view_agenda</i>
+                                                        </button> </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                         </div>
@@ -247,53 +288,56 @@
     <!-- Script para selección  -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems,);
-        });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, );
+    });
 
-        // Or with jQuery
+    // Or with jQuery
 
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
+    $(document).ready(function() {
+        $('select').formSelect();
+    });
     </script>
 
 
     <!-- Script del calendario en español -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.datepicker');
-            var instances = M.Datepicker.init(elems, {
-                showClearBtn: false,
-                firstDay: 1,
-                yearRange: [2020, 2021],
-                i18n: {
-                    months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-                    monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-                    weekdays: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
-                    weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mier', 'Jue', 'Vier', 'Sab'],
-                    weekdaysAbbrev: ['D', 'L', 'M', 'M', 'J', 'V', 'S']
-                }
-            })
-            //------------------------------Timepicker--------------------------------//
-            var elems = document.querySelectorAll('.timepicker');
-            var instances = M.Timepicker.init(elems, {
-                showClearBtn: false,
-                onOpenStart: true,
-            })
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems, {
+            showClearBtn: false,
+            firstDay: 1,
+            yearRange: [1950, 2021],
+            i18n: {
+                months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto',
+                    'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+                ],
+                monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct',
+                    'Nov', 'Dic'
+                ],
+                weekdays: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+                weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mier', 'Jue', 'Vier', 'Sab'],
+                weekdaysAbbrev: ['D', 'L', 'M', 'M', 'J', 'V', 'S']
+            }
+        })
+        //------------------------------Timepicker--------------------------------//
+        var elems = document.querySelectorAll('.timepicker');
+        var instances = M.Timepicker.init(elems, {
+            showClearBtn: false,
+            onOpenStart: true,
+        })
 
-        });
+    });
     </script>
 
 
     <!-----Inicializa sidenav------>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems,);
-        });
-
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, );
+    });
     </script>
 
 </body>
