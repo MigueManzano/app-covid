@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!---Archivos materialize-->
 
@@ -17,6 +19,7 @@
 
     <!---Inicializa icons-------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../controllers/controladorRegistroMedico.js"></script>
 </head>
 
 <body>
@@ -32,7 +35,7 @@
 
 
 
-        <form action="">
+        <div >
             <div class="container">
                 <!-- Formulario -->
                 <div class="row">
@@ -43,7 +46,7 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">face
                                     </i>
-                                    <input type="text" id="Nombre" class="validate" style="text-transform: capitalize;"
+                                    <input type="text" id="nombre" name="nombre" class="validate" style="text-transform: capitalize;"
                                         required>
                                     <label for="Nombre">Nombre(s)</label>
                                 </div>
@@ -52,7 +55,7 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">format_color_text
                                     </i>
-                                    <input type="text" id="Apellidos" class="validate"
+                                    <input type="text" id="apellidos" name="apellidos" class="validate"
                                         style="text-transform: capitalize;" required>
                                     <label for="Apellidos">Apellidos</label>
                                 </div>
@@ -65,7 +68,7 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock_outline
                                     </i>
-                                    <input type="text" id="Curp" class="validate" maxlength="18"
+                                    <input type="text" id="curp" name="curp" class="validate" maxlength="18"
                                         style="text-transform: uppercase;" required>
                                     <label for="Curp">Curp</label>
                                     <a href="https://www.curp-gratis.com.mx/consulta-curp" target="_blank">¿No conoces
@@ -76,7 +79,7 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">my_location
                                     </i>
-                                    <input type="text" class="validate" id="Domicilio"
+                                    <input type="text" class="validate" id="domicilio" name="domicilio"
                                         style="text-transform: capitalize;" required>
                                     <label for="Domicilio">Domicilio</label>
                                 </div>
@@ -85,21 +88,21 @@
 
 
 
-                            <!-- cedula -->
+                            <!-- nacimiento -->
                             <div class="row">
-                                <div class="input-field col s10 m4 offset-s1 offset-m1">
-                                    <i class="material-icons prefix blue-text indigo-text">assignment
+                            <div class="input-field col s10 m4 offset-s1 offset-m1">
+                                    <i class="material-icons prefix blue-text accent-4-text">event_available
                                     </i>
-                                    <input type="text" id="Cedula_Pro" name="Telefono" class="input-48" required min="8"
-                                        maxlenght="13">
-                                    <label for="Cedula_Pro">Cedula</label>
+                                    <input type="date" id="Fecha" name="Fecha"  required>
+                                    <label for="Fecha_Naci">Fecha de Nacimiento</label>
                                 </div>
+                                
 
                                 <!-- Correo -->
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">email
                                     </i>
-                                    <input type="text" id="Email" class="validate" required>
+                                    <input type="text" id="email" name="email" class="validate" required>
                                     <label for="Email">Correo</label>
                                 </div>
                             </div>
@@ -111,7 +114,7 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock
                                     </i>
-                                    <input type="text" id="Password" class="validate" required>
+                                    <input type="text" id="password" name="password" class="validate" required>
                                     <label for="Password">Contraseña</label>
                                 </div>
 
@@ -119,23 +122,24 @@
                                 <div class="input-field col s10 m4 offset-s1 offset-m1">
                                     <i class="material-icons prefix blue-text accent-4-text">lock
                                     </i>
-                                    <input type="text" id="Password1" class="validate" required>
+                                    <input type="text" id="password1" name="password1" class="validate" required>
                                     <label for="Password1">Confirmar Contraseña</label>
                                 </div>
                             </div>
 
 
 
-                            <!-- fecha de Nacimiento -->
+                            <!-- cedula-->
                             <div class="row">
-                                <div class="input-field col s10 m4 offset-s1 offset-m1">
-                                    <i class="material-icons prefix blue-text accent-4-text">event_available
+                            <div class="input-field col s10 m4 offset-s1 offset-m1">
+                                    <i class="material-icons prefix blue-text indigo-text">assignment
                                     </i>
-                                    <input type="text" id="Fecha_Naci" name="Fecha" class="datepicker" required>
-                                    <label for="Fecha_Naci">Fecha de Nacimiento</label>
+                                    <input type="text" id="cedula" name="cedula" class="input-48" required min="8"
+                                        maxlenght="13">
+                                    <label for="Cedula_Pro">Cedula</label>
                                 </div>
 
-                                <!-- Foto de perfil -->
+                                <!-- Foto de perfil --
                                 <div class="file-field input-field col s10 m4 offset-s1 offset-m1">
                                     <div class="btn light-blue accent-4" id="Foto_Perfil">
                                         <span class="" style="border-radius: 10px;">Subir una foto tuya: </span>
@@ -144,22 +148,23 @@
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" type="text">
                                     </div>
-                                </div>
+                                </div-->
                             </div>
 
 
 
                             <!-- Boton de registrar -->
-                            <button class="btn waves-effect waves-light light-blue accent-4" type="submit" name="action"
-                                style="border-radius: 20px;"><a href="index.html"></a> Confirmar
+                            <button onclick="registroMedico()" class="btn waves-effect waves-light light-blue accent-4" type="submit" name="btnRegistrar" id="btnRegistrar"
+                                style="border-radius: 20px;"> Confirmar
                                 <i class="material-icons right">send</i>
-                                </a></button>
+                            </button>
+                                <div name="resultado" id="resultado"></div>
                             <br><br>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+</div>
 
     </main>
 </body>
