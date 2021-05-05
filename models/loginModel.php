@@ -9,15 +9,23 @@
   
   $consulta=$conne->query($sqlCon);
   $consulta2=$conne->query($sqlCon2);
-  if ($rows = $consulta->fetch() ||$rows = $consulta2->fetch()) { 
+  if ($rows = $consulta->fetch()) {
+     
     session_start();
     $_SESSION['nombre'] =$rows["Nombre"];
     $_SESSION['apellidos'] =$rows["Apellidos"];
     $_SESSION['correo'] = $rows["Correo"];//Casi terminado
-    $_SESSION['tipo'] = $rows["IdTipo"];
       
     echo "1";
     
+  }
+  elseif ($rows = $consulta2->fetch()) {
+    session_start();
+    $_SESSION['nombre'] =$rows["Nombre"];
+    $_SESSION['apellidos'] =$rows["Apellidos"];
+    $_SESSION['correo'] = $rows["Correo"];//Casi terminado
+      
+    echo "1";
   }
   
   else{

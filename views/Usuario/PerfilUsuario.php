@@ -1,3 +1,9 @@
+<?php
+    session_start();
+   if(!isset($_SESSION['correo']))
+        header("location:../Login.php");
+    include("perfil.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +23,8 @@
 
     <!---Inicializa icons-------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../controllers/controladorPerfil.js"></script>
 
     <!-- Titulo de la ventana -->
     <title>Perfil</title>
@@ -43,14 +51,14 @@
         <br>
 
         <div class="center-align">
-            <a href="#name"><span class="black-text name ">Nombre</span></a>
-            <a href="#email"><span class="black-text email">Apellidos</span></a>
+            <a  class="black-text  "><?=$_SESSION['nombre'];?></a>
+            <a  class="black-text "><?=$_SESSION['apellidos'];?></a>
         </div>
 
         <li>
             <div class="divider"></div>
         </li>
-        <li><a href="../Usuario/Inicio.html"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
+        <li><a href="../Usuario/Inicio.php"><i class="material-icons light-blue-text accent-4-text small">cloud</i>
                 Inicio</a>
         </li>
         <li><a class="waves-effect" href="../Usuario/PerfilUsuario.html">Perfil<i
@@ -76,7 +84,7 @@
             <section>
                 <div class="row">
                     <div class="col s12 m11 offset-m2">
-                        <form action="">
+                        <div >
                             <div class="row">
                                 <div class="card horizontal">
                                     <div class="card-image">
@@ -84,7 +92,7 @@
                                         <img src="../../resource/img/Citas/human-digestive-system-163714_1280.jpg" alt="" id="Foto"
                                             class="responsive-img" width="270px" height="180px">
 
-                                        <!-- Boton para cambiar la imagen -->
+                                        <!-- Boton para cambiar la imagen ->
 
                                         <div class="file-field input-field">
                                             <div class="btn light-blue accent-4" id="foto">
@@ -95,15 +103,17 @@
                                                 <input class="file-path validate" type="text">
                                             </div>
 
-                                        </div>
+                                        </div-->
 
-                                        <!-- Contraseña -->
+                                        <!-- Contraseña ->
                                         <b style="font-family: 'Times New Roman', Times, serif;">Contraseña</b>
-                                        <input type="text" name="Password" id="Password" class="materialize-textarea">
+                                        <input type="text" name="Password" id="Password" class="materialize-textarea"-->
 
+                                        <b>Correo</b>
+                                        <input type="text" name="Correo" id="Correo" value="<?=$correo;?>" class="materialize-textarea" disabled>
                                         <!-- Fecha de Nacimiento -->
                                         <b style="font-family: 'Times New Roman', Times, serif;">Fecha de Nacimiento</b>
-                                        <input type="text" name="Fecha" id="Fecha" class="datepicker">
+                                        <input type="date" name="Fecha" id="Fecha" value="<?=$fecha;?>" disabled>
 
                                     </div>
 
@@ -111,31 +121,31 @@
                                     <div class="card-stacked">
                                         <div class="card-content" style="font-family: 'Times New Roman', Times, serif;">
                                             <b>Nombre</b>
-                                            <input type="text" name="Nombre" id="Nombre" class="materialize-textarea"
-                                                style="text-transform: capitalize;">
+                                            <input type="text" name="Nombre" id="Nombre" value="<?=$nombre;?>" class="materialize-textarea"
+                                                style="text-transform: capitalize;" disabled>
                                             <b>Apellidos</b>
                                             <input type="text" name="Apellidos" id="Apellidos"
-                                                class="materialize-textarea" style="text-transform: capitalize;">
+                                                class="materialize-textarea" value="<?=$apellido;?>" style="text-transform: capitalize;" disabled>
                                             <b>Curp</b>
-                                            <input type="text" name="Curp" id="Curp" class="materialize-textarea" no
+                                            <input type="text" name="Curp" id="Curp" value="<?=$curp;?>" class="materialize-textarea" no
                                                 disabled>
-                                            <b>Correo</b>
-                                            <input type="text" name="Correo" id="Correo" class="materialize-textarea">
+                                           
                                             <b>Domicilio</b>
-                                            <input type="text" name="Domicilio" id="Domicilio"
-                                                class="materialize-textarea">
+                                            <input type="text" name="Domicilio" id="Domicilio" value="<?=$domicilio;?>"
+                                                class="materialize-textarea" disabled>
                                             <br>
                                             <div class="card-action center">
                                                 <button type="submit"
-                                                    class="btn waves-effect waves-light light-blue accent-4" name="add"
-                                                    id="Inicia" style="border-radius: 25px;">Guardar cambios
+                                                    class="btn waves-effect waves-light light-blue accent-4" name="btnperfil"
+                                                    id="btnperfil" style="border-radius: 25px;" onclick="editar()">Editar
                                                 </button>
                                             </div>
+                                            <div id="resultado" name="resultado"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -157,7 +167,7 @@
                             <div class="card">
                                 <div class="card-image">
                                     <img
-                                        src="../../img/cuestionario-forma-prueba-lista-de-control-concepto-la-encuesta-vector-aislado-dibujado-mano-131423865.jpg">
+                                        src="../../resource/img/cuestionario-forma-prueba-lista-de-control-concepto-la-encuesta-vector-aislado-dibujado-mano-131423865.jpg">
                                 </div>
                                 <div class="card-content">
                                     <span class="card-title black-text center-align">Cuestionario</span>
@@ -198,7 +208,7 @@
                                 <div class="left">
                                     <div class="card">
                                         <div class="card-image">
-                                            <img src="../../img/80762027-tubos-de-análisis-médicos-a-la-prescripción-de-biología.jpg"
+                                            <img src="../../resource/img/80762027-tubos-de-análisis-médicos-a-la-prescripción-de-biología.jpg"
                                                 alt="">
                                         </div>
                                         <!-- Contenido de la card -->
@@ -306,7 +316,7 @@
                                             <div class="row">
                                                 <div class="card">
                                                     <div class="card-image">
-                                                        <img src="../../img/productos/tanque-oxigeno-web.jpg" alt=""
+                                                        <img src="../../resource/img/productos/tanque-oxigeno-web.jpg" alt=""
                                                             class="responsive-img" width="8px" height="270px">
                                                     </div>
                                                     <div class="card-content">

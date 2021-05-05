@@ -24,10 +24,9 @@ function logearse(){
             $("#resultado").html("Iniciando sesion...");
             
             //alert(data);
-            location.href='../views/Usuario/PerfilUsuario.html';
+            location.href='../views/Usuario/PerfilUsuario.php';
           }
           else{
-              alert(data);
             $("#resultado").html("El usuario y/o la contraseña esta mal.....");
             $("#iniciar").attr('disabled',false);
           }
